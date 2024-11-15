@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Application form</title>
+     <link rel="stylesheet" href="job_form.css"> 
+</head>
+<body>
+    <div class="form">    <h1> Application form </h1>
+   <form action="reply.html" method="get">
+    <div class="input">
+    <label class="txt" for="First name">First name</label>
+    <input minlength="4" id="First name" required>
+    <br>
+    <label class="txt" for="Last name">Last name</label>
+    <input id="Last name" minlength="4" required></div>
+    <div class="input">
+        <label class="txt" for="email">Email</label>
+        <input id="email" required>
+    </div>
+    <div class="input">
+        <label class="txt" for="phno">Contact Number</label>
+        <input id="phno" required>
+    </div>
+    <label for="country">Select your country</label>
+    <select><option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="Australia">Australia</option>
+        <option value="China">China</option>
+        <option value="Nepal">Nepal</option>
+        <option value="Germany">Germany</option>
+        <option value="Japan">Japan</option>
+        <option value="Korea">Korea</option>
+        <option value="England">England</option>
+        <option value="Russia">Russia</option></select>
+    
+   
+    <br>
+    <label for="state">Select your state</label>
+    <select name="country" id="country">
+        <option value="TN">TN</option>
+        <option value="AP">AP</option>
+        <option value="UP">UP</option>
+        <option value="HP">HP</option>
+        <option value="J&K">J&K</option>
+        <option value="karnataka">Karnataka</option>
+        <option value="punjab">Punjab</option>
+        <option value="odisha">odisha</option>
+        <option value="MP">MP</option>
+        <option value="Kerala">Kerala</option>
+    </select>
+    
+    <div>
+        <label class="txt" for="city">City</label>
+        <input id="city" required>
+    </div>
+    <div>
+        <label for="dob">Date of birth</label>
+        <input type="date" id="dob" min="2000" required>
+    </div>
+<div>
+        <label class="txt" for="inst">Institute Name</label>
+        <input id="inst" required>
+    </div>
+    <div>
+        <label class="txt" for="domain">Domain</label>
+        <input id="domain" required>
+    </div>
+    <div>
+        <label class="txt" for="grad">Graduation Year</label>
+        <input id="grad" name="grad"minlength="4" required>
+    </div>
+    
+    <div>
+        <label for="file">Resume</label>
+        <input type="file" id="file" name="file" required>
+    </div>
+    <input class="rad" type="radio" name="male" id="male" value="male">
+        <label for="male">Male</label>
+        <input class="rad" type="radio" name="female" id="female" value="female">
+        <label for="female">Female</label>
+        <br>
+        <div class="btn">
+        <button type="submit">Submit</button>
+    </div>
+</div>
+
+    
+</body>
+</html>
