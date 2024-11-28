@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Simple Form</title>
+    <link rel="stylesheet" href="form_css.css">
+</head>
+<body>
+    <h1>Simple Form</h1>
+    
+    <form action="/submit_form" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other" required>
+        <label for="other">Other</label><br><br>
+        <label>Interests:</label><br>
+        <input type="checkbox" id="sports" name="interests" value="sports">
+        <label for="sports">Sports</label><br>
+        <input type="checkbox" id="music" name="interests" value="music">
+        <label for="music">Music</label><br>
+        <input type="checkbox" id="reading" name="interests" value="reading">
+        <label for="reading">Reading</label><br><br>
+        <label>Training:</label><br>
+        <input type="checkbox" id="jAVA" name="Training" value="jAVA">
+        <label for="jAVA">Java</label><br>
+        <input type="checkbox" id="sql" name="Training" value="sql">
+        <label for="sql">SQL</label><br>
+        <input type="checkbox" id="BSM" name="Training" value="BSM">
+        <label for="BSM">BSM</label><br>
+        <input type="checkbox" id="git" name="Training" value="git">
+        <label for="git">Git</label><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

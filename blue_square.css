@@ -1,0 +1,23 @@
+body{
+    background-image: url('gen.jpeg');
+    background-repeat:repeat;
+}
+
+img{
+    width:200px;
+    padding:15px;
+    border:2px solid black;
+    margin:10px;
+    box-sizing:border-box;
+    background-repeat: repeat-x;
+    box-shadow:0 4px 8px rgba(100,255,0,255);
+    border-radius:10px;
+    transition:transform 0.3s ease;
+}
+.box{
+    background-color: aqua;
+    width:200px;
+    padding:15px;
+    position:relative;
+    top:200px;
+}

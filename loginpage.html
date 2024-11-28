@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Courier Management System - Login</title>
+<style>
+/* General Styling */
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.left-section {
+    width: 50%;
+    background: linear-gradient(to bottom right, #2575fc, #6a11cb); /* Stylish gradient */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.left-section h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 0;
+    font-style: italic;
+}
+
+.left-section p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.right-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 400px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+}
+
+form input {
+    margin-top: 10px;
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+    color: #333;
+    font-size: 14px;
+    outline: none;
+}
+
+button {
+    width: calc(50% - 10px);
+    padding: 10px;
+    margin: 15px 5px 0;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1a5dc9;
+}
+
+h2 {
+    color: #2575fc;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+span {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #2575fc;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+</style>
+</head>
+<body>
+<div class="left-section">
+    <div>
+        <h1>Nice to see you again!</h1>
+        <p>Your journey continues here. Login to access your account and manage your deliveries with ease.</p>
+    </div>
+</div>
+<div class="right-section">
+    <form action="checklogin" method="post">
+        <h2>Courier Management System</h2>
+        <span>Login to Your Account</span>
+        <label for="id">Enter Username</label>
+        <input type="text" placeholder="Username" name="id" required />
+        <label for="password">Enter Password</label>
+        <input type="password" placeholder="Password"id="password" name="password" 
+               required minlength="8" maxlength="20" 
+               pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}"
+               title="Password must be 8-20 characters long, include at least one uppercase letter, one lowercase letter, one number, and one special character." />
+        <div style="text-align: center; margin-top: 15px;">
+            <button type="submit">SUBMIT</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

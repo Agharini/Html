@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Courier Management System</title>
+<style>
+/* General Styling */
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.left-section {
+    width: 50%;
+    background: linear-gradient(to bottom right, #2575fc, #6a11cb); /* Stylish gradient */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.left-section h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 0;
+    font-style: italic;
+}
+
+
+.left-section p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.right-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 400px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+}
+
+form input {
+    margin-top: 10px;
+    padding: 10px 15px;
+    width: calc(100% - 30px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+    color: #333;
+    font-size: 14px;
+    outline: none;
+}
+
+button {
+    width: calc(50% - 10px);
+    padding: 10px;
+    margin: 15px 5px 0;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1a5dc9;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    font-style: italic;
+}
+
+h2 {
+    color: #2575fc;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+span {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #2575fc;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+}
+</style>
+<script>
+function validateForm() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    // Email validation regex
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Password validation regex
+    const passwordPattern = /^(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    // Email validation
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address (e.g., example@mail.com).");
+        return false;
+    }
+
+    // Password validation
+    if (!passwordPattern.test(password)) {
+        alert(
+            "Password must be at least 8 characters long, contain at least one uppercase letter, one special character, and one number."
+        );
+        return false;
+    }
+
+    return true;
+}
+</script>
+</head>
+<body>
+<div class="left-section">
+    <div>
+    
+        <h1>Welcome!</h1>
+        <p>From our hands to your doorstep, we deliver more than just packages  <br> - we deliver trust and care.<br> Your journey starts with us, and every mile matters.</p>
+    </div>
+</div>
+<div class="right-section">
+    <form:form action="adduser" method="post" modelAttribute="usr" onsubmit="return validateForm();">
+        <h2>Courier Management System</h2>
+        <span>Way To Join Our Courier Service</span>
+        <form:label path="id">Enter User ID</form:label>
+        <form:input path="id" type="text" placeholder="User ID" name="id" />
+        <form:errors path="id" cssClass="error" />
+        <form:label path="email">Enter Email</form:label>
+        <form:input path="email" type="text" placeholder="EMAIL" name="email" id="email" />
+        <form:errors path="email" cssClass="error" />
+        <form:label path="password">Enter Password</form:label>
+        <form:input path="password" type="password" placeholder="PASSWORD" name="password" id="password" />
+        <form:errors path="password" cssClass="error" />
+        <div style="text-align: center; margin-top: 15px;">
+            <button type="submit">SUBMIT</button>
+            <button><a href="/userlogin">LOGIN</a></button>
+        </div>
+    </form:form>
+</div>
+</body>
+</html>

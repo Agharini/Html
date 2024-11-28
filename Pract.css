@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around; /* Distributes space around items */
+    width: 80%; /* Container width */
+    background-color: #f2f2f2;
+    padding: 10px;
+    border: 2px solid #ccc;
+}
+
+.flex-item {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 20px;
+    flex: 1; /* Allow items to grow and shrink equally */
+    margin: 10px; /* Space between items */
+    text-align: center; /* Center text */
+}

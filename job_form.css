@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(194, 223, 234);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.form{
+    width:500px;
+    margin: auto;
+ margin-top: 25px;
+    background-color: rgba(0,0,0,0.5);
+    color: rgb(17, 12, 12);
+    padding:10px 20px 30px;
+    font-size: 20px;
+    border-radius: 5%;
+    box-sizing: border-box;
+    box-shadow: 10cap;
+}
+/* .form .txt{ */
+    /* display: block; */
+/* } */
+.form h1{
+    text-align: center;
+}
+.input input{
+   
+    
+    border:2px;
+    box-shadow: 5px;
+   
+    padding: 5px 10px;
+}
+input{
+    margin-bottom: 10px;
+    border:2px;
+    box-shadow: 5px;
+    padding: 5px 10px;
+    width:50%;
+    box-sizing: border-box;
+    border-radius: 2px;
+   
+}
+select{
+    margin-bottom: 10px;
+    border:2px;
+    box-shadow: 5px;
+    padding: 5px 10px;
+    width:50%;
+    border-radius: 2px;
+}
+input:focus{
+    background-color:grey;
+}
+.btn{
+    text-align: center;
+}
+button{
+    background-color:rgb(44, 40, 35) ;
+    font-size: 25px;
+    color:white;
+    padding:5px;
+    margin-top: 5px;
+    border-radius: 7px;
+}
+.radio input{
+    width:0%;
+    text-align: left;
+}
+.rad{
+    width:10%;
+    text-align: left;
+}
